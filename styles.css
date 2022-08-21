@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+} 
+
+.divider {
+    display: block;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid rgba(0,0,0,0.3);
+    margin: 3.5em 0;
+    position: relative;
+}
+
+
+header {
+    position: fixed;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    background: white;
+}
+header .title {
+    margin: 0px;
+}
+header .navbar a {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    color: black;
+    font-family: arial;
+}
+header .navbar a:hover {
+    color: rgb(12, 109, 25);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+.home .content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100vw;
+    max-height: 80%;
+    max-width: 1100px;
+    position: relative;
+   
+}
+.home .content .img {
+    width: 100%;
+    height: 100%;
+}
+.home .content .phone-icon {
+    width: 2vw;
+    height: 2vw;
+    transform: translate(0%, 14%);
+}
+.home .content .button{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+    border: 4px solid rgb(162, 172, 166);
+    padding: 1vw;
+    font-family: arial;
+    border-radius: 5%;
+    background-color: rgb(238, 253, 242);
+    font-size: 2vw;
+    cursor: pointer;
+}
+.home .content .button::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(78, 153, 78);
+    
+    transition: 0.2s linear;
+    z-index: -1;
+}
+.home .content .button:hover::before {
+    width: 100%;
+    left: 0;
+}
+.home .content .button:hover {
+    color: white;
+    border: 6px solid rgb(3, 73, 3);
+    border-radius: 0%;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+.about { 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo {
+    justify-content: center;
+    display: flex;
+}
+.logo .logo-picture {
+    width: 30%;
+}
+
+.about .content {
+    background: rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(8, 208, 243, 0.15);
+    margin: auto;
+    margin-top: 2vh;
+    height: 60vh;
+    width: 80vw;
+    max-width: 800px;
+    min-width: 550px;
+    padding: 2.5%;
+    font-size: 120%;
+}
+.about .content .right {
+    margin-top: 10%;
+    text-indent: 7%;
+}
+.about .content .left {
+    text-indent: 7%;
+}
+
+
+
+.gallery {
+    position: relative;
+    height: 250vw;
+}
+.gallery h2 {
+    text-decoration: underline;
+    font-size: 3vw;
+    top: 5%;
+    left: 45%;
+    position: relative;
+}
+
+
+
+
+.gallery .houses {
+    top: 8%;
+    left: 45.5%;
+    position: relative;
+    font-size: 2.5vw;
+    box-sizing: border-box;
+}
+.gallery .house-imgs {
+    height: 40vw;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 9%;
+    overflow: hidden;
+    user-select: none;
+}
+.house-imgs .img495{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.gallery .right_arrow {
+    right: -15px;
+    position: absolute;
+    top: 42%;
+    height: 7vh;
+    user-select: none;
+}
+.gallery .left_arrow {
+    left: -15px;
+    top: 42%;
+    position: absolute;
+    height: 6vh;
+    user-select: none;
+}
+.gallery .right_arrow:hover {
+    height: 10vh;
+    top: 39%;
+    right: -25px;
+    background-color: rgba(0,0,0,0.3);
+}
+.gallery .left_arrow:hover {
+    height: 10vh;
+    top: 39%;
+    left: -25px;
+    background-color: rgba(0,0,0,0.3);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+
+
+.gallery .interior {
+    position: relative;
+    font-size: 2.5vw;
+    left: 46%;
+    top: 13%;
+    margin: auto;
+} 
+.gallery .interior-imgs {
+    height: 40vw;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 14%;
+    overflow: hidden;
+    user-select: none;
+}
+.gallery .interior-imgs .img2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+
+.gallery .kitchens {
+    position: relative;
+    font-size: 2.5vw;
+    left: 45.5%;
+   
+    top: 18%;
+    margin: auto;
+} 
+.gallery .kitchen-imgs {
+    height: 40vw;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 19%;
+    overflow: hidden;
+    user-select: none;
+}
+.gallery .kitchen-imgs .img3 {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+
+.gallery .bathrooms {
+    position: relative;
+    font-size: 2.5vw;
+    left: 44%;
+    top: 22%;
+    margin: auto;
+} 
+.gallery .bathroom-imgs {
+    height: 40vw;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 23%;
+    overflow: hidden;
+    user-select: none;
+}
+.gallery .bathroom-imgs .img4 {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+
+
+
+
+.footer {
+    height: 34vw;
+    width: 100%;
+    background: rgba(1, 124, 57, 0.774);
+    padding: 5%;
+}
+.footer h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
+    position: relative;
+}
+.footer .content-nav {
+    color: white;
+    margin-top: 7%;
+    position: relative;
+    left: 20.5%;
+}
+.footer .content-nav button {
+    background: rgb(110, 211, 110);
+    padding: 2.5%;
+    border: 1px solid rgb(9, 104, 48);
+    border-radius: 10px;
+    color: white;
+    user-select: pointer;
+    font-size: 2vw;
+    
+}
+.footer .content-nav button:hover {
+    text-decoration: underline;
+    color: black;
+    border: 2.5px solid black;
+    padding: 2.01%;
+    font-size: 2.3vw;
+    background: rgb(188, 236, 188);
+  
+}
+#button {
+    margin-right: 5vw;
+}
+#button:hover {
+    margin-right: 4.93vw;
+}
+#button-call {
+    margin-right: 5vw;
+    
+}
+#button-call:hover {
+    margin-right: 5.1vw;
+}
+
+.facebook-logo {
+    width: 2vw;
+    height: 2vw;
+    transform: translate(0%, 14%);
+    margin-right: 1vw;
+}
+.phone-logo {
+    width: 2vw;
+    height: 2vw;
+    transform: translate(0%, 14%);
+    margin-right: 2.0vw;
+}
+.email-logo {
+    width: 4vw;
+    height: 3.5vw;
+    transform: translate(0%, 32%);
+    margin-right: 1vw;
+    margin-top: -15.7%;
+}
