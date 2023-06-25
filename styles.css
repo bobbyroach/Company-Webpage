@@ -1,27 +1,17 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    border: none;
-    outline: none;
+*, ::after, ::before {
     box-sizing: border-box;
+    margin: 0;
 }
+
 
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    
+    background-color: rgba(195, 194, 194, 0.8);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 } 
 
-.divider {
-    display: block;
-    padding: 0;
-    height: 1px;
-    border: 0;
-    border-top: 3px solid rgba(0,0,0,0.3);
-    margin: 3.5em 0;
-    position: relative;
-}
 
 
 header {
@@ -37,15 +27,21 @@ header {
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     background: white;
 }
-header .title {
-    margin: 0px;
-}
-header .navbar a {
-    font-size: 1.5rem;
+
+header a {
+    font-size: 2.5vw;
     margin-left: 1.5rem;
     color: black;
-    font-family: arial;
+    text-decoration: none;
 }
+
+header .title a {
+    font-size: 3.5vw;
+    margin-left: 0;
+    color: black;
+
+}
+
 header .navbar a:hover {
     color: rgb(12, 109, 25);
     text-decoration: underline;
@@ -55,29 +51,49 @@ header .navbar a:hover {
 
 
 
+@media screen and (min-width: 1050px) {
+    header .title a {
+        font-size: 36px;
+    }
+    header .navbar a {
+        font-size: 25px;
+    }
+}
+
+
+
+
 .home .content{
+
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin-top: 100px;
     width: 100vw;
-    max-height: 80%;
-    max-width: 1100px;
+    max-height: 100%;
     position: relative;
+    margin-left: 1vw;
    
 }
+
+
+
 .home .content .img {
     width: 100%;
     height: 100%;
+   border: 6px solid rgba(196, 193, 193, 0.8);
+
 }
 .home .content .phone-icon {
     width: 2vw;
     height: 2vw;
     transform: translate(0%, 14%);
 }
+
+
 .home .content .button{
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 27%;
     transform: translate(-50%);
     border: 4px solid rgb(162, 172, 166);
     padding: 1vw;
@@ -87,6 +103,18 @@ header .navbar a:hover {
     font-size: 2vw;
     cursor: pointer;
 }
+
+@media (min-width: 850px) {
+    .home .content {
+        height: 79vh;
+    }
+    .home .content .button {
+        bottom: 14%;
+    }
+}
+
+
+
 .home .content .button::before {
     content: '';
     position: absolute;
@@ -109,6 +137,113 @@ header .navbar a:hover {
     text-decoration: underline;
 }
 
+.home .logo {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.home .logo-picture {
+    margin-bottom: 0.7vw;
+}
+.home .logo p {
+    font-size: 1.75vw;
+    margin: 0.2vw 0;;
+}
+
+
+.logo {
+    justify-content: center;
+    display: flex;
+}
+.logo .logo-picture {
+    width: 30%;
+    max-width: 300px;
+    min-width: 40px;
+}
+
+
+
+
+
+
+@media (min-width: 1050px) {
+    .home .content {
+        margin-top: 100px;
+        align-items: center;
+        background-color: white;
+        background-image: url('images/white_fractal_background.jpg');
+    }
+
+    .home .content .img {
+        height: 45vw;
+        width: 60%;
+        position: absolute;
+        max-height: 75vh;
+        margin-left: 2vw;
+    }
+
+    .home .content {
+        height: 80vh;
+    }
+
+    .home .content .call-button {
+        visibility: hidden;
+    }
+
+    .home .logo {
+        position: absolute;
+        visibility: visible;
+        margin-left: 57.5%;
+        height: 17vw;
+        max-height: 210px;
+        width: 46vw;
+        top: 25%;
+    }
+
+}
+
+
+
+
+
+@media (min-width: 1275px) {
+    .home .content {
+        margin-top: 100px;
+        margin-left: 0.5vw;
+    }
+    .home .logo {
+        top: 24%;
+    }
+
+    .home .content .img {
+        left: 2vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        width: 58%;
+        max-height: 70vh;
+    }
+}
+
+@media (min-width: 1400px) {
+    .home .content {
+        margin-top: 103px;
+    
+    }
+    .home .content .img {
+        left: 3vw;
+        width: 58%;
+        max-width: 800px;
+
+    }
+
+    .home .logo {
+        top: 23%;
+        margin-left: 56%;
+    }
+}
+
 
 
 
@@ -117,33 +252,36 @@ header .navbar a:hover {
 
 
 .about { 
+    margin-top: 5rem;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-.logo {
-    justify-content: center;
-    display: flex;
-}
-.logo .logo-picture {
-    width: 30%;
+    background-color: white;
 }
 
+.about h1 {
+    margin: auto;
+    margin-top: 5vh;
+}
+
+
 .about .content {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgb(211, 210, 210);
     border: 3px solid rgba(8, 208, 243, 0.15);
     margin: auto;
-    margin-top: 2vh;
-    height: 60vh;
     width: 80vw;
-    max-width: 800px;
-    min-width: 550px;
+    max-width: 900px;
     padding: 2.5%;
     font-size: 120%;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
+
+    
+    
 }
 .about .content .right {
-    margin-top: 10%;
+    margin-top: 5%;
     text-indent: 7%;
 }
 .about .content .left {
@@ -152,42 +290,69 @@ header .navbar a:hover {
 
 
 
+@media (min-width: 1050px) {
+    .about {
+        margin-top: 6rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    .about {
+        margin-top: 9rem;
+        background: url('images/about-background.png') bottom left;
+        background-repeat: repeat-x;
+        background-color: white;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .gallery {
     position: relative;
-    height: 250vw;
+    height: 215vw;
 }
-.gallery h2 {
-    text-decoration: underline;
-    font-size: 3vw;
-    top: 5%;
-    left: 45%;
-    position: relative;
+h2 {
+    margin-top: 5%;
+    font-size: 4vw;
+    margin-left: 42.5%;
+    
 }
 
 
 
 
 .gallery .houses {
-    top: 8%;
-    left: 45.5%;
-    position: relative;
-    font-size: 2.5vw;
-    box-sizing: border-box;
+    font-size: 3vw;
 }
 .gallery .house-imgs {
     height: 40vw;
     width: 60%;
     margin: auto;
     position: relative;
-    top: 9%;
+    top: 4%;
     overflow: hidden;
     user-select: none;
 }
-.house-imgs .img495{
+.house-imgs .img1 {
     display: none;
     width: 100%;
     height: 100%;
+    border: 4px solid rgb(42, 41, 41);
+
 }
+
 .gallery .right_arrow {
     right: -15px;
     position: absolute;
@@ -226,18 +391,16 @@ header .navbar a:hover {
 
 
 .gallery .interior {
-    position: relative;
-    font-size: 2.5vw;
-    left: 46%;
-    top: 13%;
-    margin: auto;
+    font-size: 3vw;
 } 
+
+
 .gallery .interior-imgs {
     height: 40vw;
     width: 60%;
     margin: auto;
     position: relative;
-    top: 14%;
+    top: 8%;
     overflow: hidden;
     user-select: none;
 }
@@ -245,24 +408,20 @@ header .navbar a:hover {
     width: 100%;
     height: 100%;
     display: none;
+    border: 4px solid rgb(42, 41, 41);
 }
 
 
 
 .gallery .kitchens {
-    position: relative;
-    font-size: 2.5vw;
-    left: 45.5%;
-   
-    top: 18%;
-    margin: auto;
+    font-size: 3vw;
 } 
 .gallery .kitchen-imgs {
     height: 40vw;
     width: 60%;
     margin: auto;
     position: relative;
-    top: 19%;
+    top: 13%;
     overflow: hidden;
     user-select: none;
 }
@@ -270,23 +429,22 @@ header .navbar a:hover {
     width: 100%;
     height: 100%;
     display: none;
+    border: 4px solid rgb(42, 41, 41);
+
 }
 
 
 
 .gallery .bathrooms {
-    position: relative;
-    font-size: 2.5vw;
-    left: 44%;
-    top: 22%;
-    margin: auto;
+    font-size: 3vw;
+
 } 
 .gallery .bathroom-imgs {
     height: 40vw;
     width: 60%;
     margin: auto;
     position: relative;
-    top: 23%;
+    top: 17%;
     overflow: hidden;
     user-select: none;
 }
@@ -294,7 +452,102 @@ header .navbar a:hover {
     width: 100%;
     height: 100%;
     display: none;
+    border: 4px solid rgb(42, 41, 41);
+
 }
+
+
+@media (min-width: 1200px) {
+
+    h2 {
+        font-size: 47px;
+    }
+
+    .gallery {
+        height: 100vw;
+    }
+
+    .gallery .houses {
+        font-size: 35px;
+    }
+
+    .gallery .house-imgs {
+        height: 35vw;
+        width: 40vw;
+        position: absolute;
+        left: 5vw;
+        top: 8vw;
+        max-width: 650px;
+        max-height: 500px;
+    }
+
+    .gallery .interior {
+        font-size: 35px;
+    }
+    .gallery .interior-imgs {
+        height: 35vw;
+        width: 40vw;
+        position: absolute;
+        left: 55vw;
+        top: 8vw;
+        max-width: 650px;
+        max-height: 500px;
+    }
+
+    .gallery .kitchens {
+        font-size: 35px;
+    }
+    .gallery .kitchen-imgs {
+        height: 35vw;
+        width: 40vw;
+        position: absolute;
+        left: 5vw;
+        top: 50vw;
+        max-width: 650px;
+        max-height: 500px;
+
+    }
+
+    .gallery .bathrooms {
+        font-size: 35px;
+    }
+    .gallery .bathroom-imgs {
+        height: 35vw;
+        width: 40vw;
+        position: absolute;
+        left: 55vw; 
+        top: 50vw;
+        max-width: 650px;
+        max-height: 500px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .gallery .house-imgs {
+        top: 110px;
+    }
+    .gallery .interior-imgs {
+        top: 110px;
+    }
+    .gallery .kitchen-imgs {
+        top: 710px;
+    }
+    .gallery .bathroom-imgs {
+        top: 710px;
+    }
+
+    .gallery {
+        height: 1400px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -302,62 +555,63 @@ header .navbar a:hover {
 
 
 .footer {
-    height: 34vw;
+    height: 25vw;
     width: 100%;
-    background: rgba(1, 124, 57, 0.774);
+    background: rgba(0, 10, 5, 0.774);
     padding: 5%;
+    position: relative;
+    display: flex;
+    
 }
+
 .footer h2 {
     color: white;
-    display: flex;
-    justify-content: center;
+    top: 0px;
+    left: 7.5vw;
+    transform: translate(-50%);
+    position: absolute;
     font-size: 4vw;
-    position: relative;
+    
 }
+
 .footer .content-nav {
     color: white;
-    margin-top: 7%;
-    position: relative;
-    left: 20.5%;
+    top: 50%;
+    position: absolute;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    
 }
+
+
 .footer .content-nav button {
-    background: rgb(110, 211, 110);
-    padding: 2.5%;
-    border: 1px solid rgb(9, 104, 48);
+    background: rgb(79, 144, 79);
+    padding: 1.5vw;
+    border: 1px solid rgb(4, 44, 21);
     border-radius: 10px;
     color: white;
     user-select: pointer;
     font-size: 2vw;
     
 }
+
 .footer .content-nav button:hover {
     text-decoration: underline;
     color: black;
-    border: 2.5px solid black;
-    padding: 2.01%;
-    font-size: 2.3vw;
     background: rgb(188, 236, 188);
   
 }
-#button {
-    margin-right: 5vw;
-}
-#button:hover {
-    margin-right: 4.93vw;
-}
-#button-call {
-    margin-right: 5vw;
-    
-}
-#button-call:hover {
-    margin-right: 5.1vw;
-}
+
+
 
 .facebook-logo {
     width: 2vw;
     height: 2vw;
     transform: translate(0%, 14%);
     margin-right: 1vw;
+    
 }
 .phone-logo {
     width: 2vw;
@@ -371,4 +625,39 @@ header .navbar a:hover {
     transform: translate(0%, 32%);
     margin-right: 1vw;
     margin-top: -15.7%;
+}
+
+
+
+@media (min-width: 1050px) {
+    .footer {
+        max-height: 300px;
+    }
+    .footer .content-nav {
+        gap: 28px;
+    }
+
+    .footer .content-nav button {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    .footer h2 {
+        font-size: 40px;
+    }
+
+    .facebook-logo {
+        width: 17px; 
+        height: 17px; 
+    }
+
+    .phone-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .email-logo {
+        width:36px; 
+        height: 33px;
+    }
 }
