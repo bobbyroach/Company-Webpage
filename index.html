@@ -2,7 +2,7 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0'>
         <title> Oakcrestbuilders </title>
         <link rel='stylesheet' href='styles.css'>
     </head>
@@ -11,12 +11,12 @@
         <header class='header'>
 
             <div class='title'>
-                <h1>Oakcrestbuilders</h1>
+                <a href="#home">Oakcrestbuilders</a>
             </div>
 
             <nav class='navbar'>
-                <a href='#about'>About</a>
-                <a href='#gallery'>Gallery</a>
+                <a href='#about-tag'>About</a>
+                <a href='#gallery-tag'>Gallery</a>
                 <a href='#contact'>Contact</a>
             </nav>
 
@@ -25,12 +25,24 @@
 
         <!-- Home Section -->
         <section class='home' id='home'>
-                <div class='content'>
+                <div class='content' >
                     <img src='images/495.jpg' class='img'>
-                    <a href='tel:508-958-6070'><button class='button'>
-                        <img class='phone-icon' src='images/phone_icon.png'>
-                        Call Now</button></a>
+
+                    <div class='logo'>
+                        <img src='images/logo.jpeg' class='logo-picture'>
+                        <p>Oakcrest Builders Inc.</p>
+                        <p>Mendon, MA</p>
+                        <p>Oakcrestbuild@gmail.com</p>
+                        <p>508-958-6070</p>
                     </div>
+                    
+                    <a href='tel:508-958-6070' class='call-button'>
+                        <button class='button'>
+                            <img class='phone-icon' src='images/phone_icon.png'>
+                            Call Now
+                        </button>
+                    </a>
+                </div>
         </section>
         
         <div class='divider'></div>
@@ -39,11 +51,10 @@
 
 
         <!-- About Section -->
-        <section class='about' id='about'>
+        <section class='about' id='about-tag'>
 
-            <div class='logo'>
-                <img src='images/logo.jpeg' class='logo-picture'>
-            </div>
+            <h1>About</h1>
+
             <div class='content'>
                 <p class='left'>Oakcrest Builders is a family-based company and has been building quality new custom single family homes. 
                     Headquartered in Mendon, Massachusetts, Oakcrest Builders has an outstanding portfolio with a focus
@@ -59,43 +70,47 @@
                     on the show “This Old House.” As owner of Oakcrest Builders, Mr. Roach provides impeccable attention to detail 
                     and energy efficiency, as well as responsiveness and customer support.  </p>
             </div>
+            <div class="background"></div>
         </section>
 
         <div class='divider'></div>
 
 
         <!-- Gallery Section -->
-        <section class='gallery' id='gallery'>
-            <h2>Gallery</h2>
+        <h2 id="gallery-tag">Gallery</h2>
+        <section class='gallery'>
+        
 
-            <div class='houses'>Exterior:</div>
+            
             <div class='house-imgs'>
-                <img src='images/495.jpg' class='img495 fade'>
-                <img src='images/ext2.jpeg' class='img495 fade'>
-                <img src='images/ext3.jpeg' class='img495 fade'>
-                <img src='images/ext4.jpeg' class='img495 fade'>
-                <img src='images/ext5.jpeg' class='img495 fade'>
-                <img src='images/ext6.jpeg' class='img495 fade'>
-                <img src='images/ext7.jpeg' class='img495 fade'>
-                <img src='images/ext8.jpeg' class='img495 fade'>
-                <img src='images/ext9.jpeg' class='img495 fade'>
-                <img src='images/ext10.jpeg' class='img495 fade'>
-                <img src='images/ext11.jpeg' class='img495 fade'>
-                <img src='images/ext12.jpeg' class='img495 fade'>
-                <img src='images/ext13.jpeg' class='img495 fade'>
-                <img src='images/ext14.jpeg' class='img495 fade'>
-                <img src='images/ext15.jpeg' class='img495 fade'>
-                <img src='images/ext16.jpeg' class='img495 fade'>
-                <img src='images/ext17.jpeg' class='img495 fade'>
+                <div class='houses'>Exterior:</div>
+                <img src='images/495.jpg' class='img1 fade'>
+                <img src='images/ext2.jpeg' class='img1 fade'>
+                <img src='images/ext3.jpeg' class='img1 fade'>
+                <img src='images/ext4.jpeg' class='img1 fade'>
+                <img src='images/ext5.jpeg' class='img1 fade'>
+                <img src='images/ext6.jpeg' class='img1 fade'>
+                <img src='images/ext7.jpeg' class='img1 fade'>
+                <img src='images/ext8.jpeg' class='img1 fade'>
+                <img src='images/ext9.jpeg' class='img1 fade'>
+                <img src='images/ext10.jpeg' class='img1 fade'>
+                <img src='images/ext11.jpeg' class='img1 fade'>
+                <img src='images/ext12.jpeg' class='img1 fade'>
+                <img src='images/ext13.jpeg' class='img1 fade'>
+                <img src='images/ext14.jpeg' class='img1 fade'>
+                <img src='images/ext15.jpeg' class='img1 fade'>
+                <img src='images/ext16.jpeg' class='img1 fade'>
+                <img src='images/ext17.jpeg' class='img1 fade'>
 
 
                 <img src='images/right_arrow.png' class='right_arrow' onClick='moveSlide1(1)'>
                 <img src='images/left_arrow.png' class='left_arrow' onClick='moveSlide1(-1)'>
             </div>
 
-            <div class='interior'>Interior:</div>
             <div class='interior-imgs'>
-                <img src='images/int1.jpeg' class='img2 fade'>
+                <div class='interior'>Interior:</div>
+
+                <img src='images/int11.jpeg' class='img2 fade'>
                 <img src='images/int2.jpeg' class='img2 fade'>
                 <img src='images/int3.jpeg' class='img2 fade'>
                 <img src='images/int4.jpeg' class='img2 fade'>
@@ -105,7 +120,7 @@
                 <img src='images/int8.jpeg' class='img2 fade'>
                 <img src='images/int9.jpeg' class='img2 fade'>
                 <img src='images/int10.jpeg' class='img2 fade'>
-                <img src='images/int11.jpeg' class='img2 fade'>
+                <img src='images/int1.jpeg' class='img2 fade'>
                 <img src='images/int12.jpeg' class='img2 fade'>
                 <img src='images/int13.jpeg' class='img2 fade'>
                 <img src='images/int14.jpeg' class='img2 fade'>
@@ -120,7 +135,6 @@
                 <img src='images/int23.jpeg' class='img2 fade'>
                 <img src='images/int24.jpeg' class='img2 fade'>
                 <img src='images/int25.jpeg' class='img2 fade'>
-                <img src='images/int26.jpeg' class='img2 fade'>
                 <img src='images/int27.jpeg' class='img2 fade'>
                 <img src='images/int28.jpeg' class='img2 fade'>
                 <img src='images/int29.jpeg' class='img2 fade'>
@@ -132,8 +146,9 @@
             </div>
 
 
-            <div class='kitchens'>Kitchens:</div>
             <div class='kitchen-imgs'>
+                <div class='kitchens'>Kitchens:</div>
+
                 <img src='images/k1.jpeg' class='img3 fade'>
                 <img src='images/k2.jpeg' class='img3 fade'>
                 <img src='images/k3.jpeg' class='img3 fade'>
@@ -153,15 +168,15 @@
                 <img src='images/k17.jpeg' class='img3 fade'>
                 <img src='images/k18.jpeg' class='img3 fade'>
                 <img src='images/k19.jpeg' class='img3 fade'>
-                <img src='images/k20.jpeg' class='img3 fade'>
 
                 <img src='images/right_arrow.png' class='right_arrow' onClick='moveSlide3(1)'>
                 <img src='images/left_arrow.png' class='left_arrow' onClick='moveSlide3(-1)'>
 
             </div>
 
-            <div class='bathrooms'>Bathrooms:</div>
             <div class='bathroom-imgs'>
+                <div class='bathrooms'>Bathrooms:</div>
+
                 <img src='images/b1.jpeg' class='img4 fade'>
                 <img src='images/b2.jpeg' class='img4 fade'>
                 <img src='images/b3.jpeg' class='img4 fade'>
@@ -205,11 +220,14 @@
                 <h2>Contact</h2>
                 <div class='content-nav'>
                     <a href='mailto: oakcrestbuild@gmail.com'><button id='button'>
-                        <img src='images/email.png' class='email-logo'>Email</button></a>
+                            <img src='images/email.png' class='email-logo'>Email</button>
+                    </a>
                     <a href='tel:508-958-6070'><button class='button' id='button-call'>
-                        <img src='images/phone_icon.png' class='phone-logo'>Call</button></a>
+                            <img src='images/phone_icon.png' class='phone-logo'>Call</button>
+                    </a>
                     <a href="https://www.facebook.com/oakcrestbuild/"><button>
-                        <img src='images/facebook.png' class='facebook-logo'>Facebook</button></a>
+                            <img src='images/facebook.png' class='facebook-logo'>Facebook</button>
+                    </a>
                 </div>
             </div>
 
